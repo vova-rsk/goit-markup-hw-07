@@ -1,0 +1,106 @@
+/* оформление flex-ом и позиционирование навигации в header */
+.navigation__menu {
+  display: flex;
+  margin: 0 0 0 93px;
+  padding: 0;
+  list-style: none;
+}
+
+/* оформление flex-ом и позиционирование контактов в header */
+.communication-list {
+  display: flex;
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* установка меджуелементных интервалов навигации и контактов в header */
+.navigation__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.communication__item:not(:first-child) {
+  margin-left: 30px;
+}
+
+/* Оформление лого и навигации в header flex-ом в один ряд */
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+/* Оформление всех елементов header в одну строку через Flex */
+.page-header__container {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  align-items: center;
+}
+
+/* Оформление вертикальных отступов логотипа в header */
+.page-header__logo {
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+
+/* Оформление текста из навигации в header*/
+.navigation__link {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-txt-color);
+  text-decoration: none;
+  transition: color var(--delay) var(--time-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &--current {
+    position: relative;
+    color: var(--accent-color);
+  }
+
+  &--current::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(calc(100% + 28px));
+    display: block;
+    width: 100%;
+    height: 4px;
+    content: '';
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
+
+/* Оформление ссылок контактной информации (почта, телефон) в header */
+.communication__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-txt-color);
+  text-decoration: none;
+  transition: color var(--delay) var(--time-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.communication__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

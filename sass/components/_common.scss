@@ -1,0 +1,40 @@
+/* Задания базовых свойств елементам страниц */
+body {
+  font-family: var(--main-font-name), var(--main-font-family);
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: var(--main-txt-color);
+  background-color: var(--main-bg-color);
+}
+
+/* Задаем секциям, футеру и хедеру максимальной ширины */
+.section,
+// .page-header,
+.page-footer {
+  max-width: 1600px;
+}
+
+/* Задание базовых значений блочной модели основному контейнеру секций */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Задаем тип и параметры линии обводки при фокусе для всех активных елементов по умолчанию */
+*:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+  outline-color: var(--accent-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}

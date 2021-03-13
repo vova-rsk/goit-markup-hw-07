@@ -1,8 +1,11 @@
 /*
  * Декларирование переменных 
  */
+
+/* ПЕРЕНЕС В VARIABLES */
 :root {
   /* Набор основной цветовой гаммы фона и текста */
+
   --accent-color: #2196f3;
   --current-bg-color: #2196f3;
   --current-txt-color: #fff;
@@ -29,6 +32,7 @@
  */
 
 /* Невидимость */
+/*  ПЕРЕНЕС В COMMON */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -43,6 +47,7 @@
 }
 
 /* Задаем тип и параметры линии обводки при фокусе для всех активных елементов по умолчанию */
+/*ПЕРЕНЕС В COMMON*/
 *:focus {
   outline-width: 1px;
   outline-style: dotted;
@@ -62,18 +67,19 @@ p {
   margin-bottom: 0;
 }
 
+/*ПЕРЕНЕС В COMMON*/
 img {
   display: block;
   max-width: 100%;
 }
 
 /* Точечное снятие маркера со списков */
-.navigation-list,
-.header-contacts-list,
+.navigation_list,  /*перенес*/
+.header-contacts-list, /*перенес*/
 .advantages-list,
 .case-list,
 .team-list,
-.footer-contacts-list,
+.footer-contacts-list, /*ПЕРЕНЕС*/
 .portfolio-button-list,
 .portfolio-work-list {
   margin: 0;
@@ -82,6 +88,7 @@ img {
 }
 
 /* Задания базовых свойств елементам страниц */
+/*ПЕРЕНЕС В COMMON*/
 body {
   font-family: var(--main-font-name), var(--main-font-family);
   font-style: normal;
@@ -91,6 +98,7 @@ body {
 }
 
 /* Задаем секциям, футеру и хедеру максимальной ширины */
+/* ПЕРЕНЕС В COMMON*/
 section,
 header,
 footer {
@@ -104,11 +112,13 @@ section {
 }
 
 /* Задаем всем кнопкам тип курсора при наведении */
+/*ПЕРЕНЕС В COMMON*/
 button {
   cursor: pointer;
 }
 
 /* Задание базовых значений блочной модели основному контейнеру секций */
+/*ПЕРЕНЕС В COMMON*/
 .container {
   width: 1200px;
   margin-left: auto;
@@ -122,6 +132,7 @@ button {
  */
 
 /* Задание фона блоку footer */
+/*ПЕРЕНЕС В FOOTER*/
 .footer {
   background-color: var(--secondary-bg-color);
 }
@@ -146,6 +157,7 @@ button {
 }
 
 /* Оформление логотипа в header и footer */
+/* ПЕРЕНЕС В LOGO*/
 .logo {
   font-family: var(--secondary-font-name), var(--secondary-font-family);
   font-weight: 700;
@@ -154,48 +166,62 @@ button {
   color: var(--accent-color);
 }
 
+/* ПЕРЕНЕС В LOGO*/
 .header .logo-studio {
   color: #000;
 }
 
+/* ПЕРЕНЕС В LOGO*/
 .footer .logo-studio {
   color: #fff;
 }
 
 /* оформление flex-ом и позиционирование навигации в header */
-.navigation-list {
+/* ПЕРЕНЕС В HEADER */
+.navigation_list {
   display: flex;
   margin-left: 93px;
 }
 
 /* установка меджуелементных интервалов навигации и контактов в header */
-.navigation-list li:not(:first-child) {
+/* ПЕРЕНЕС В HEADER */
+.navigation_list li:not(:first-child) {
   margin-left: 50px;
 }
 
+/* ПЕРЕНЕС В HEADER */
 .header-contacts-list li:not(:first-child) {
   margin-left: 30px;
 }
 
 /* оформление flex-ом и позиционирование контактов в header */
+/* ПЕРЕНЕС В HEADER */
 .header-contacts-list {
   display: flex;
   margin-left: auto;
 }
 
-.header-contacts-list .header-mail,
+/* ПЕРЕНЕС В HEADER */
+.header-contacts-list .header-mail {
+  display: flex;
+  align-items: center;
+}
+
+/* ПЕРЕНЕС В HEADER */
 .header-contacts-list .header-tel {
   display: flex;
   align-items: center;
 }
 
 /* Оформление лого и навигации в header flex-ом в один ряд */
+/* ПЕРЕНЕС В HEADER */
 .navigation {
   display: flex;
   align-items: center;
 }
 
 /* Оформление всех елементов header в одну строку через Flex */
+/* ПЕРЕНЕС В HEADER */
 .header > .container {
   display: flex;
   padding-top: 0;
@@ -204,13 +230,15 @@ button {
 }
 
 /* Оформление вертикальных отступов логотипа в header */
+/* ПЕРЕНЕС В LOGO */
 .header .logo {
   margin-top: 24px;
   margin-bottom: 25px;
 }
 
 /* Оформление текста из навигации в header*/
-.navigation-list a {
+/* ПЕРЕНЕС В LOGO */
+.navigation__list a {
   display: block;
   font-weight: 500;
   font-size: 14px;
@@ -220,12 +248,18 @@ button {
 }
 
 /* Добавление эффекта текущей страницы в навигации */
-.navigation-studia.current,
+/* ПЕРЕНЕС В LOGO */
+.navigation-studia.current {
+  color: var(--accent-color);
+}
+
+/* ПЕРЕНЕС В LOGO */
 .navigation-portfolio.current {
   color: var(--accent-color);
 }
 
 /* Оформление ссылок контактной информации (почта, телефон) в header */
+/*ПЕРЕНЕС В HEADER*/
 .header-contacts-list a {
   font-weight: 500;
   font-size: 14px;
@@ -235,22 +269,41 @@ button {
 }
 
 /* Добавление эффектов hover и focus для навигации и ссылок контактов в header и footer */
-.navigation-list a:hover,
-.navigation-list a:focus,
-.header-contacts-list a:hover,
-.header-contacts-list a:focus,
+/*ПЕРЕНЕС */
+.navigation__list a:hover,
+.navigation__list a:focus {
+  color: var(--accent-color);
+}
+
+/* ПЕРЕНЕС ??*/
 .footer-contacts-list a:hover,
 .footer-contacts-list a:focus {
   color: var(--accent-color);
 }
 
-.navigation-list a,
-.header-contacts-list a,
+/*ПЕРЕНЕС */
+.header-contacts-list a:hover,
+.header-contacts-list a:focus {
+  color: var(--accent-color);
+}
+
+/*ПЕРЕНЕС */
+.navigation__list a {
+  transition: color var(--delay) var(--time-function);
+}
+
+/*ПЕРЕНЕС */
 .footer-contacts-list a {
   transition: color var(--delay) var(--time-function);
 }
 
+/*ПЕРЕНЕС */
+.header-contacts-list a {
+  transition: color var(--delay) var(--time-function);
+}
+
 /* Добавление нижнего подчеркивания в header */
+/*ПЕРЕНЕС */
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -318,9 +371,27 @@ button {
 }
 
 /* Оформление подзаголовков в секции "Наши преимущества" */
-.observation-title,
-.punctuality-title,
-.planning-title,
+.observation-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.punctuality-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.planning-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
 .technologies-title {
   font-weight: 700;
   font-size: 14px;
@@ -337,8 +408,14 @@ button {
 }
 
 /* Нижний отступ от заголовков Чем мы занимаемся и Наша команда */
-.case-title,
-.team-title,
+.case-title {
+  margin-bottom: 50px;
+}
+
+.team-title {
+  margin-bottom: 50px;
+}
+
 .clients-title {
   margin-bottom: 50px;
 }
@@ -350,8 +427,20 @@ button {
 }
 
 /* Текстовое формление заголовков в секциях "Чем мы занимаемся" и "Наша команда" */
-.case-title,
-.team-title,
+.case-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 .clients-title {
   font-weight: 700;
   font-size: 36px;
@@ -508,22 +597,26 @@ button {
 }
 
 /* Оформленеие вертикальных отступов основного контейнера в footer */
+/*ПЕРЕНЕС*/
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 /* Оформление вертикальных отступов между текстом в footer */
+/*ПЕРЕНЕС*/
 .footer .logo {
   display: inline-block;
   margin-bottom: 20px;
 }
 
+/*ПЕРЕНЕС*/
 .footer-contacts-list > li {
   margin-top: 9px;
 }
 
 /* Текстовое оформление елементов адреса в footer */
+/*ПЕРЕНЕС*/
 .address {
   font-style: normal;
   font-weight: 400;
@@ -532,11 +625,13 @@ button {
   color: #fff;
 }
 
+/*ПЕРЕНЕС*/
 .address-container {
   margin-right: 70px;
 }
 
 /* Текстовое оформление контактных ссылок в footer */
+/*ПЕРЕНЕС*/
 .footer-contacts-list a {
   font-weight: 400;
   font-size: 14px;
@@ -548,7 +643,7 @@ button {
 .advantages .svg-container,
 .person-container .svg-container,
 .clients .svg-container,
-.footer .svg-container {
+.footer .svg-container  /*ПЕРЕНЕС*/ {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -565,7 +660,14 @@ button {
 }
 
 /* Фофрмление горизонтального размещения контейнеров с иконками сецсетей/лого клиентов */
-.social-networks-list,
+/*ПЕРЕНЕС В ФУТЕР, НО НЕ ДЛЯ TEAM!! */
+.social-networks-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
 .clients-list {
   display: flex;
   justify-content: space-between;
@@ -612,31 +714,40 @@ button {
 }
 
 /* Снимаем рамку выделения при focus на тех елементах где происходят явные цветовые изменения */
-.portfolio-button-list button:focus,
+.portfolio-button-list button:focus {
+  outline: none;
+}
+
 .person-container .svg-container:focus,
 .clients-list .svg-container:focus,
 .card > .card-link:focus,
-.footer .svg-container:focus {
+.footer .svg-container:focus /* ПЕРЕНЕС*/ {
   outline: none;
 }
 
 /* Подтягивания цвета иконок (цвет зависит от состояния контейнера в конкретный момент) */
 .btn-close > .icon,
-.header-mail .icon,
-.header-tel .icon,
+.header-mail .icon, /*ПЕРЕНЕС*/
+.header-tel .icon, /*ПЕРЕНЕС*/
 .person-container .icon,
-.footer .icon,
+.footer .icon,    /*ПЕРЕНЕС*/
 .clients-list .icon {
   fill: currentColor;
 }
 
 /* Задания отступа */
-.header-mail .icon,
+/* ПЕРЕНЕС*/
+.header-mail .icon {
+  margin-right: 10px;
+}
+
+/* ПЕРЕНЕС*/
 .header-tel .icon {
   margin-right: 10px;
 }
 
 /* Задание размеров и верхнего отступа контейнеру ПРИСОЕДИНЯЙТЕСЬ в footer */
+/* ПЕРЕНЕС*/
 .footer .agitation-container {
   width: 206px;
   max-height: 80px;
@@ -644,6 +755,7 @@ button {
 }
 
 /* Окультуривание слова ПРИСОЕДИНЯЙТЕСЬ */
+/* ПЕРЕНЕС*/
 .footer .agitation-title {
   margin-bottom: 20px;
   font-weight: 400;
@@ -655,12 +767,14 @@ button {
 }
 
 /* Обнуление вертикальных margin списка соцсетей в footer */
+/* ПЕРЕНЕС ПРОВЕРКА НЕОБХОДИМОСТИ В ИНСТПЕКТОРЕ*/
 .footer .social-networks-list {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 /* Задание параметров контейнеру с иконками сецсетей в footer */
+/* ПЕРЕНЕС*/
 .footer .svg-container {
   width: 44px;
   height: 44px;
@@ -672,12 +786,14 @@ button {
 }
 
 /* Эффект смены беграунд-фона при ховере и фокусе */
+/* ПЕРЕНЕС*/
 .footer .svg-container:hover,
 .footer .svg-container:focus {
   background-color: var(--accent-color);
 }
 
 /* Задаем flex контейнеру в footer чтоб разделить контент на 2 части по горизонтали */
+/* ПЕРЕНЕС*/
 .footer .container {
   display: flex;
   flex-wrap: wrap;
@@ -692,14 +808,50 @@ button {
 }
 
 /* Позиционирование и оформление подчеркивание текущей страницы*/
-.navigation-studia.current,
-.navigation-portfolio.current,
+/* ПЕРЕНЕС */
+.navigation-studia.current {
+  position: relative;
+}
+
+/* ПЕРЕНЕС */
+.navigation-portfolio.current {
+  position: relative;
+}
+
+/* ПЕРЕНЕС */
 .navigation-contacts.current {
   position: relative;
 }
 
-.navigation-studia.current::after,
-.navigation-portfolio.current::after,
+/* ПЕРЕНЕС */
+.navigation-studia.current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(calc(100% + 28px));
+  display: block;
+  width: 100%;
+  height: 4px;
+  content: '';
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* ПЕРЕНЕС */
+.navigation-portfolio.current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(calc(100% + 28px));
+  display: block;
+  width: 100%;
+  height: 4px;
+  content: '';
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* ПЕРЕНЕС */
 .navigation-contacts.current::after {
   position: absolute;
   left: 0;
@@ -946,7 +1098,21 @@ button {
 /* Оформление полей ввода в модалке */
 .modal-form input[name='name'],
 .modal-form input[name='telephone'],
-.modal-form input[name='email'],
+.modal-form input[name='email'] {
+  width: 100%;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-txt-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: color var(--delay) var(--time-function),
+    border-color var(--delay) var(--time-function);
+}
+
 .modal-form textarea[name='comments'] {
   width: 100%;
 
