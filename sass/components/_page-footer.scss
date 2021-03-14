@@ -40,17 +40,6 @@
   }
 }
 
-.social-networks {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  list-style: none;
-}
-
-.social-networks__icon {
-  fill: currentColor;
-}
-
 .join-offer-container {
   width: 206px;
   max-height: 80px;
@@ -67,21 +56,11 @@
   color: var(--current-txt-color);
 }
 
-// .social-networks {
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
+.social-networks__link--join-offer {
+  @extend %social-networks-link;
 
-.social-networks__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
   color: var(--current-txt-color);
   background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 50%;
   transition: background-color var(--delay) var(--time-function);
 
   &:hover,
@@ -104,4 +83,67 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.sign-container__title {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--current-txt-color);
+}
+
+.sign-form__email {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 358px;
+  height: 46px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--current-txt-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: border-color var(--delay) var(--time-function);
+
+  &::placeholder {
+    color: var(--third-txt-color);
+  }
+
+  &:hover {
+    border-color: var(--accent-color);
+  }
+}
+
+.sign-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  padding: 0;
+  width: 200px;
+  height: 46px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875px;
+  letter-spacing: 0.06em;
+  color: var(--current-txt-color);
+  background-color: var(--current-bg-color);
+  border: none;
+  border-radius: 4px;
+  transition: box-shadow var(--delay) var(--time-function);
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.sign-button__icon {
+  margin-left: 10px;
+  fill: currentcolor;
 }

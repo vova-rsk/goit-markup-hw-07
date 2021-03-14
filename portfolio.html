@@ -380,93 +380,97 @@
     </main>
 
     <footer class="page-footer" id="contacts">
-      <div class="container">
+      <div class="container page-footer__container">
         <div class="address-container">
-          <a class="logo" href="./index.html"
+          <a class="logo page-footer__logo" href="./index.html"
             >Web<span class="logo__studio logo__studio--white">Studio</span>
           </a>
           <address class="address">
             г. Киев, пр-т Леси Украинки, 26
-            <ul class="footer-contacts-list">
-              <li>
-                <a class="address-mail" href="mailto:info@example.com">
+            <ul class="address__list">
+              <li class="address__item">
+                <a class="address__link" href="mailto:info@example.com">
                   info@example.com
                 </a>
               </li>
-              <li>
-                <a class="address-tel" href="tel:+380991111111">
+              <li class="address__item">
+                <a class="address__link" href="tel:+380991111111">
                   +38 099 111 11 11
                 </a>
               </li>
             </ul>
           </address>
         </div>
-        <div class="agitation-container">
-          <p class="agitation-title"><b>Присоединяйтесь</b></p>
-          <ul class="social-networks-list">
-            <li>
+        <div class="join-offer-container">
+          <p class="join-offer__title">
+            <b>Присоединяйтесь</b>
+          </p>
+          <ul class="social-networks">
+            <li class="social-networks__item">
               <a
-                class="svg-container"
+                class="social-networks__link social-networks__link--join-offer"
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <svg class="icon" width="20" height="20">
+                <svg class="social-networks__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-networks__item">
               <a
-                class="svg-container"
+                class="social-networks__link social-networks__link--join-offer"
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <svg class="icon" width="20" height="20">
+                <svg class="social-networks__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-networks__item">
               <a
-                class="svg-container"
+                class="social-networks__link social-networks__link--join-offer"
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <svg class="icon" width="20" height="20">
+                <svg class="social-networks__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-networks__item">
               <a
-                class="svg-container"
+                class="social-networks__link social-networks__link--join-offer"
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <svg class="icon" width="20" height="20">
+                <svg class="social-networks__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="form-container">
-          <p class="agitation-title"><b>Подпишитесь на рассылку</b></p>
+        <div class="sign-container">
+          <p class="sign-container__title">
+            <b>Подпишитесь на рассылку</b>
+          </p>
           <form class="sign-form">
             <input
-              class="sign-email"
+              class="sign-form__email"
               type="email"
               name="email"
               placeholder="E-mail"
             />
-            <button class="btn-sign" type="submit" aria-label="Подписаться">
+            <button class="sign-button" type="submit" aria-label="Подписаться">
               Подписаться
-              <span class="sign-icon">
-                <svg class="icon" width="24" height="23">
+              <span>
+                <svg class="sign-button__icon" width="24" height="23">
                   <use href="./images/icons.svg#icon-send" />
                 </svg>
               </span>

@@ -8,11 +8,12 @@ body {
 }
 
 /* Задаем секциям, футеру и хедеру максимальной ширины */
-.section,
 // .page-header,
-.page-footer {
-  max-width: 1600px;
-}
+// .page-footer 
+
+// .section {
+//   max-width: 1600px;
+// }
 
 /* Задание базовых значений блочной модели основному контейнеру секций */
 .container {
@@ -21,6 +22,10 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.section-hero__container {
+  max-width: 1600px;
 }
 
 /* Задаем тип и параметры линии обводки при фокусе для всех активных елементов по умолчанию */
@@ -38,3 +43,30 @@ img {
 button {
   cursor: pointer;
 }
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.social-networks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+.social-networks__icon {
+  fill: currentColor;
+}
+
+%social-networks-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+}
+

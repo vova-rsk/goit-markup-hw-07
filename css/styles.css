@@ -4,6 +4,7 @@
 
 /* ПЕРЕНЕС В VARIABLES */
 :root {
+
   /* Набор основной цветовой гаммы фона и текста */
 
   --accent-color: #2196f3;
@@ -76,9 +77,9 @@ img {
 /* Точечное снятие маркера со списков */
 .navigation_list,  /*перенес*/
 .header-contacts-list, /*перенес*/
-.advantages-list,
-.case-list,
-.team-list,
+.advantages-list, /*перенес*/
+.case-list, /*ПЕРЕНЕС*/
+.team-list, /*ПЕРЕНЕС*/
 .footer-contacts-list, /*ПЕРЕНЕС*/
 .portfolio-button-list,
 .portfolio-work-list {
@@ -106,6 +107,7 @@ footer {
 }
 
 /* Задаем секциям вертикальные паддинги согласно макету */
+/*ПЕРЕНЕС В COMMON*/
 section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -138,6 +140,7 @@ button {
 }
 
 /* Задание фона блоку hero */
+/* ПЕРЕНЕС*/
 .hero {
   background-color: #c4c4c4;
   background-image: linear-gradient(
@@ -152,6 +155,7 @@ button {
 }
 
 /* Задание фона блоку team */
+/*Перенес*/
 .team {
   background-color: var(--third-bg-color);
 }
@@ -309,12 +313,14 @@ button {
 }
 
 /* Задание вертикальных отступов в hero */
+/*ПЕРЕНЕС*/
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
 }
 
 /* Оформление заголовка в секции hero */
+/*ПЕРЕНЕС*/
 .hero-title {
   margin-bottom: 30px;
   font-weight: 900;
@@ -327,6 +333,7 @@ button {
 }
 
 /* Оформление кнопки "Заказать услугу" в секции hero */
+/*ПЕРЕНЕС*/
 .hero-button {
   display: block;
   margin-left: auto;
@@ -346,31 +353,37 @@ button {
 }
 
 /* Обнуление верхнего отступа в секции Наши преимущества */
+/*ПЕРЕНЕС*/
 .advantages {
   padding-bottom: 0;
 }
 
 /* Выстраивание горизонтально кентента секции Наши преимущества */
+/*ПЕРЕНЕС*/
 .advantages-list {
   display: flex;
 }
 
 /* Задание ширины блока с описанием преимуществ*/
+/*ПЕРЕНЕС*/
 .advantages-list > li {
   width: 270px;
 }
 
 /* Задание отступов между блоками с описанием преимуществ */
+/*ПЕРЕНЕС*/
 .advantages-list > li:not(:first-child) {
   margin-left: 30px;
 }
 
 /* Задание отступа в заголовке */
+/*ПЕРЕНЕС*/
 .advantages-list h3 {
   margin-bottom: 10px;
 }
 
 /* Оформление подзаголовков в секции "Наши преимущества" */
+/*ПЕРЕНЕС*/
 .observation-title {
   font-weight: 700;
   font-size: 14px;
@@ -378,6 +391,7 @@ button {
   text-transform: uppercase;
 }
 
+/*ПЕРЕНЕС*/
 .punctuality-title {
   font-weight: 700;
   font-size: 14px;
@@ -385,6 +399,7 @@ button {
   text-transform: uppercase;
 }
 
+/*ПЕРЕНЕС*/
 .planning-title {
   font-weight: 700;
   font-size: 14px;
@@ -392,6 +407,7 @@ button {
   text-transform: uppercase;
 }
 
+/*ПЕРЕНЕС*/
 .technologies-title {
   font-weight: 700;
   font-size: 14px;
@@ -400,6 +416,7 @@ button {
 }
 
 /* Оформление текста в секции "Наши преимущества" */
+/*ПЕРЕНЕС*/
 .advantages-list p {
   font-weight: 400;
   font-size: 14px;
@@ -408,25 +425,30 @@ button {
 }
 
 /* Нижний отступ от заголовков Чем мы занимаемся и Наша команда */
+/*ПЕРЕНЕС*/
 .case-title {
   margin-bottom: 50px;
 }
 
+/*ПЕРЕНЕС*/
 .team-title {
   margin-bottom: 50px;
 }
 
+/*ПЕРЕНЕС*/
 .clients-title {
   margin-bottom: 50px;
 }
 
 /* Выравнивание горизонтально кентента Чем мы занимаемся */
+/*ПЕРЕНЕС*/
 .case-list {
   display: flex;
   justify-content: space-between;
 }
 
 /* Текстовое формление заголовков в секциях "Чем мы занимаемся" и "Наша команда" */
+/*ПЕРЕНЕС*/
 .case-title {
   font-weight: 700;
   font-size: 36px;
@@ -434,6 +456,7 @@ button {
   text-align: center;
 }
 
+/*ПЕРЕНЕС*/
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -441,6 +464,7 @@ button {
   text-align: center;
 }
 
+/*ПЕРЕНЕС*/
 .clients-title {
   font-weight: 700;
   font-size: 36px;
@@ -449,7 +473,9 @@ button {
 }
 
 /* Разметка сетки с карточкамы сотрудников в Студия */
+/*ПЕРЕНЕС*/
 .team-list {
+
   /* Расстояние между карточками работников (наша команда) в Студия */
   --person-set-gap: 30px;
 
@@ -460,6 +486,7 @@ button {
 }
 
 /* Оформление карточки сотрудника */
+/*ПЕРЕНЕС*/
 .team-list > .person {
   flex-basis: calc(100% / 4 - var(--person-set-gap));
   margin-top: var(--person-set-gap);
@@ -471,11 +498,13 @@ button {
 }
 
 /* Оформление вертикальных отступов текстовой части карточки */
+/*ПЕРЕНЕС*/
 .person .person-container {
   padding: 30px 32px;
 }
 
 /* Оформление имен в секции "Наша команда" */
+/*ПЕРЕНЕС*/
 .person .name {
   margin-bottom: 10px;
   font-weight: 500;
@@ -485,6 +514,7 @@ button {
 }
 
 /* Оформление именования должностей в секции "Наша команда" */
+/*ПЕРЕНЕС*/
 .person .position {
   margin-bottom: 16px;
   font-weight: 400;
@@ -566,6 +596,7 @@ button {
 
 /* Разметка сетки с карточкамы выполненных работ в Портфолио */
 .portfolio-work-list {
+  
   /* Расстояние между карточками в Портфолио */
   --card-set-gap: 30px;
 
@@ -640,9 +671,9 @@ button {
 }
 
 /* Задаем flex и центрирование контейнерам с иконками из svg-спрайта */
-.advantages .svg-container,
-.person-container .svg-container,
-.clients .svg-container,
+.advantages .svg-container, /*ПЕРЕНЕС*/
+.person-container .svg-container, /*ПЕРЕНЕС*/
+.clients .svg-container, /*ПЕРЕНЕС*/
 .footer .svg-container  /*ПЕРЕНЕС*/ {
   display: flex;
   justify-content: center;
@@ -650,6 +681,7 @@ button {
 }
 
 /* Задание параметров контейнера с иконками преимуществ */
+/*ПЕРЕНЕС*/
 .advantages .svg-container {
   width: 270px;
   height: 120px;
@@ -660,7 +692,7 @@ button {
 }
 
 /* Фофрмление горизонтального размещения контейнеров с иконками сецсетей/лого клиентов */
-/*ПЕРЕНЕС В ФУТЕР, НО НЕ ДЛЯ TEAM!! */
+/*ПЕРЕНЕС В ФУТЕР*/
 .social-networks-list {
   display: flex;
   justify-content: space-between;
@@ -668,6 +700,7 @@ button {
   list-style: none;
 }
 
+/*ПЕРЕНЕС в CLIENTS*/
 .clients-list {
   display: flex;
   justify-content: space-between;
@@ -676,6 +709,7 @@ button {
 }
 
 /* Задание параметров контейнера с иконками соцсетей в карточках сотрудников */
+/*ПЕРЕНЕС В TEAM*/ 
 .person-container .svg-container {
   width: 44px;
   height: 44px;
@@ -688,6 +722,7 @@ button {
 }
 
 /* Эффекты смены цвета и фона при ховере и фокусе */
+/*ПЕРЕНЕС*/
 .person-container .svg-container:hover,
 .person-container .svg-container:focus {
   color: var(--current-txt-color);
@@ -695,6 +730,7 @@ button {
 }
 
 /* Задание параметров контейнера с лого постоянных клиентов */
+/*ПЕРЕНЕС*/
 .clients .svg-container {
   width: 170px;
   height: 90px;
@@ -707,6 +743,7 @@ button {
 }
 
 /* Задаем смену цвета лого и рамки при hover и focus */
+/*ПЕРЕНЕС*/
 .clients-list .svg-container:hover,
 .clients-list .svg-container:focus {
   color: var(--accent-color);
@@ -718,20 +755,20 @@ button {
   outline: none;
 }
 
-.person-container .svg-container:focus,
-.clients-list .svg-container:focus,
+.person-container .svg-container:focus, /*ПЕРЕНЕС*/
+.clients-list .svg-container:focus, /*ПЕРЕНЕС*/
 .card > .card-link:focus,
 .footer .svg-container:focus /* ПЕРЕНЕС*/ {
   outline: none;
 }
 
 /* Подтягивания цвета иконок (цвет зависит от состояния контейнера в конкретный момент) */
-.btn-close > .icon,
+.btn-close > .icon, /*ПЕРЕНЕС*/
 .header-mail .icon, /*ПЕРЕНЕС*/
 .header-tel .icon, /*ПЕРЕНЕС*/
-.person-container .icon,
+.person-container .icon, /*ПЕРЕНЕС*/
 .footer .icon,    /*ПЕРЕНЕС*/
-.clients-list .icon {
+.clients-list .icon { /*ПЕРЕНЕС*/
   fill: currentColor;
 }
 
@@ -866,10 +903,12 @@ button {
 }
 
 /* Позиционирование и оформление подписи картинок Чем мы занимаемся */
+/*ПЕРЕНЕС*/
 .case-list li {
   position: relative;
 }
 
+/*ПЕРЕНЕС*/
 .case-list .sign {
   position: absolute;
   left: 0;
@@ -890,6 +929,7 @@ button {
 }
 
 /* Оформление заднего фона модалки */
+/*ПЕРЕНЕС*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -901,6 +941,7 @@ button {
   transition: opacity var(--delay) var(--time-function);
 }
 
+/*ПЕРЕНЕС*/
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -908,10 +949,12 @@ button {
 }
 
 /* Оформление модального окна */
+/*ПЕРЕНЕС*/
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
+/*ПЕРЕНЕС*/
 .modal {
   position: absolute;
   top: 50%;
@@ -928,6 +971,7 @@ button {
 }
 
 /* Оформление кнопки Закрыть на модальном окне */
+/*ПЕРЕНЕС*/
 .modal .btn-close {
   position: absolute;
   top: 0;
@@ -983,6 +1027,7 @@ button {
 }
 
 /* Оформление поля ввода ел.почты в форме на подписку в футере */
+/*ПЕРЕНЕС*/
 .sign-form > .sign-email {
   padding-left: 16px;
   padding-right: 16px;
@@ -1000,16 +1045,19 @@ button {
   transition: border-color var(--delay) var(--time-function);
 }
 
+/*ПЕРЕНЕС*/
 .sign-form > .sign-email::placeholder {
   color: var(--third-txt-color);
 }
 
 /* Добавление еффекта ховера на поле ввода ел.почты в форме на подписку в футере */
+/* ПЕРЕНЕС */
 .sign-form > .sign-email:hover {
   border-color: var(--accent-color);
 }
 
 /* Оформление кнопки в форме на подписку в футере */
+/*ПЕРЕНЕС*/
 .sign-form > .btn-sign {
   display: inline-flex;
   justify-content: center;
@@ -1029,23 +1077,27 @@ button {
   transition: box-shadow var(--delay) var(--time-function);
 }
 
+/*ПЕРЕНЕС*/
 .btn-sign > .sign-icon {
   margin-left: 10px;
   color: var(--current-txt-color);
 }
 
 /* Добавление еффекта ховера на кнопку в форме на подписку в футере */
+/*ПЕРЕНЕС*/
 .sign-form > .btn-sign:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Добавление еффекта ховера и фокуса на кнопку закрытия ("крестик") в модалке */
+/*ПЕРЕНЕС*/
 .modal .btn-close:hover,
 .modal .btn-close:focus {
   color: var(--accent-color);
 }
 
 /* Оформление заголовка в модалке */
+/*ПЕРЕНЕС*/
 .modal .title {
   margin-bottom: 12px;
   font-weight: 700;
@@ -1056,6 +1108,7 @@ button {
 }
 
 /* Оформление кнопки Отправить в модалке */
+/*ПЕРЕНЕС*/
 .modal-form > .btn-submit {
   display: block;
   margin: 30px auto 0;
@@ -1078,6 +1131,7 @@ button {
 }
 
 /* Добавление еффекта ховера и фокуса на кнопку Отправить в модалке */
+/*ПЕРЕНЕС*/
 .modal-form > .btn-submit:hover,
 .modal-form > .btn-submit:focus {
   background-color: #188ce8;
@@ -1085,6 +1139,7 @@ button {
 }
 
 /* Оформление меток над полями ввода в модалке */
+/*ПЕРЕНЕС*/
 .modal-form > .label {
   display: block; /**/
   margin-bottom: 4px;
@@ -1096,6 +1151,7 @@ button {
 }
 
 /* Оформление полей ввода в модалке */
+/*ПЕРЕНЕС*/
 .modal-form input[name='name'],
 .modal-form input[name='telephone'],
 .modal-form input[name='email'] {
@@ -1113,6 +1169,7 @@ button {
     border-color var(--delay) var(--time-function);
 }
 
+/*ПЕРЕНЕС*/
 .modal-form textarea[name='comments'] {
   width: 100%;
 
@@ -1128,6 +1185,7 @@ button {
     border-color var(--delay) var(--time-function);
 }
 
+/*ПЕРЕНЕС*/
 .modal-form input[name='name'],
 .modal-form input[name='telephone'],
 .modal-form input[name='email'] {
@@ -1135,6 +1193,7 @@ button {
   height: 40px;
 }
 
+/*ПЕРЕНЕС*/
 .modal-form textarea[name='comments'] {
   display: block;
   padding: 12px 16px;
@@ -1142,6 +1201,7 @@ button {
   resize: none;
 }
 
+/*ПЕРЕНЕС*/
 .modal-form textarea[name='comments']::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -1151,11 +1211,13 @@ button {
 }
 
 /* Позиционирование иконок в полях ввода */
+/*ПЕРЕНЕС*/
 .modal-form .group {
   position: relative;
   margin-bottom: 10px;
 }
 
+/*ПЕРЕНЕС*/
 .modal-form input[name='name'] + .icon,
 .modal-form input[name='telephone'] + .icon,
 .modal-form input[name='email'] + .icon {
@@ -1167,6 +1229,7 @@ button {
 }
 
 /* Оформление кастомного чекбокса и его анимации с ховером и фокусом*/
+/*ПЕРЕНЕС*/
 .modal-form .group-checkbox {
   margin-top: 20px;
   font-weight: 400;
@@ -1177,26 +1240,31 @@ button {
   text-align: center;
 }
 
+/*ПЕРЕНЕС*/
 .group-checkbox .agreement-link {
   color: var(--accent-color);
   text-decoration-line: underline;
 }
 
+/*ПЕРЕНЕС*/
 .modal-form .group:hover input,
 .modal-form .group:focus-within input {
   border-color: var(--accent-color);
 }
 
+/*ПЕРЕНЕС*/
 .modal-form .group:hover .icon,
 .modal-form .group:focus-within .icon {
   fill: var(--accent-color);
 }
 
+/*ПЕРЕНЕС*/
 .modal-form .group:hover textarea,
 .modal-form .group:focus-within textarea {
   border-color: var(--accent-color);
 }
 
+/*ПЕРЕНЕС*/
 .group-checkbox .check-icon {
   margin-right: 8px;
   fill: var(--accent-color);
@@ -1207,18 +1275,22 @@ button {
   cursor: pointer;
 }
 
+/*ПЕРЕНЕС*/
 .check-icon use {
   display: none;
 }
 
+/*ПЕРЕНЕС*/
 .checkbox-agreement:checked + .check-icon {
   border: none;
 }
 
+/*ПЕРЕНЕС*/
 .checkbox-agreement:checked + .check-icon use {
   display: block;
 }
 
+/*ПЕРЕНЕС*/
 .group-checkbox > label {
   display: flex;
   justify-content: center;
