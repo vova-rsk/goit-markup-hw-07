@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -41,7 +41,7 @@
           </ul>
         </nav>
 
-        <ul class="communication-list">
+        <ul class="communication">
           <li class="communication__item">
             <a class="communication__link" href="mailto:info@devstudio.com">
               <svg class="communication__icon" width="16" height="12">
@@ -68,34 +68,46 @@
           <!-- Скрытый заголовок -->
           <h1 class="visually-hidden">Портфолио</h1>
 
-          <ul class="portfolio-button-list">
-            <li>
-              <button class="button-all" type="button" aria-label="Все">
+          <ul class="section-portfolio__button-list">
+            <li class="section-portfolio__button-item">
+              <button
+                class="all-button section-portfolio__button"
+                type="button"
+                aria-label="Все"
+              >
                 Все
               </button>
             </li>
-            <li>
+            <li class="section-portfolio__button-item">
               <button
-                class="button-website"
+                class="website-button section-portfolio__button"
                 type="button"
                 aria-label="Веб-сайты"
               >
                 Веб-сайты
               </button>
             </li>
-            <li>
-              <button class="button-app" type="button" aria-label="Приложения">
+            <li class="section-portfolio__button-item">
+              <button
+                class="app-button section-portfolio__button"
+                type="button"
+                aria-label="Приложения"
+              >
                 Приложения
               </button>
             </li>
-            <li>
-              <button class="button-design" type="button" aria-label="Дизайн">
+            <li class="section-portfolio__button-item">
+              <button
+                class="design-button section-portfolio__button"
+                type="button"
+                aria-label="Дизайн"
+              >
                 Дизайн
               </button>
             </li>
-            <li>
+            <li class="section-portfolio__button-item">
               <button
-                class="button-marketing"
+                class="marketing-button section-portfolio__button"
                 type="button"
                 aria-label="Маркетинг"
               >
@@ -104,22 +116,22 @@
             </li>
           </ul>
 
-          <ul class="portfolio-work-list">
+          <ul class="section-portfolio__work-list">
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/tehnokryak.jpg"
                     alt="фото tehnokryak"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Технокряк это современная площадка распространения
                       коронавируса. Компании используют эту платформу для
                       цифрового шпионажа и атак на защищённые сервера
@@ -128,28 +140,28 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Технокряк</h2>
-                  <p class="type">Веб-сайт</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Технокряк</h2>
+                  <p class="card__type">Веб-сайт</p>
                 </div>
               </a>
             </li>
 
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/poster-neworlean-vs-goldenstar.jpg"
                     alt="фото poster-neworlean-vs-goldenstar"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Постер Neworlean vs Goldenstar это современная площадка
                       распространения коронавируса. Компании используют эту
                       платформу для цифрового шпионажа и атак на защищённые
@@ -158,28 +170,28 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Постер New Orlean vs Golden Star</h2>
-                  <p class="type">Дизайн</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Постер New Orlean vs Golden Star</h2>
+                  <p class="card__type">Дизайн</p>
                 </div>
               </a>
             </li>
 
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/restoran-seafood.jpg"
                     alt="фото Restaurant SeaFood"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Ресторан SeaFood это современная площадка распространения
                       коронавируса. Компании используют эту платформу для
                       цифрового шпионажа и атак на защищённые сервера
@@ -188,28 +200,28 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Ресторан Seafood</h2>
-                  <p class="type">Приложение</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Ресторан Seafood</h2>
+                  <p class="card__type">Приложение</p>
                 </div>
               </a>
             </li>
 
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/proekt-prime.jpg"
                     alt="фото Project Prime"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Проект Prime это современная площадка распространения
                       коронавируса. Компании используют эту платформу для
                       цифрового шпионажа и атак на защищённые сервера
@@ -218,28 +230,28 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Проект Prime</h2>
-                  <p class="type">Маркетинг</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Проект Prime</h2>
+                  <p class="card__type">Маркетинг</p>
                 </div>
               </a>
             </li>
 
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/proekt-boxes.jpg"
                     alt="фото Project Boxes"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Проект Boxes это современная площадка распространения
                       коронавируса. Компании используют эту платформу для
                       цифрового шпионажа и атак на защищённые сервера
@@ -248,28 +260,28 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Проект Boxes</h2>
-                  <p class="type">Приложение</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Проект Boxes</h2>
+                  <p class="card__type">Приложение</p>
                 </div>
               </a>
             </li>
 
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/inspiration-has-no-borders.jpg"
                     alt="фото Inspiration has no Boarders"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Inspiration has no Boarders это современная площадка
                       распространения коронавируса. Компании используют эту
                       платформу для цифрового шпионажа и атак на защищённые
@@ -278,28 +290,28 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Inspiration has no Borders</h2>
-                  <p class="type">Веб-сайт</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Inspiration has no Borders</h2>
+                  <p class="card__type">Веб-сайт</p>
                 </div>
               </a>
             </li>
 
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/izdanie-limited-edition.jpg"
                     alt="фото Limited Edition"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Limited Edition это современная площадка распространения
                       коронавируса. Компании используют эту платформу для
                       цифрового шпионажа и атак на защищённые сервера
@@ -308,28 +320,28 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Издание Limited Edition</h2>
-                  <p class="type">Дизайн</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Издание Limited Edition</h2>
+                  <p class="card__type">Дизайн</p>
                 </div>
               </a>
             </li>
 
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/proekt-lab.jpg"
                     alt="фото Project Lab"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Проект Lab это современная площадка распространения
                       коронавируса. Компании используют эту платформу для
                       цифрового шпионажа и атак на защищённые сервера
@@ -338,28 +350,28 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Проект LAB</h2>
-                  <p class="type">Маркетинг</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Проект LAB</h2>
+                  <p class="card__type">Маркетинг</p>
                 </div>
               </a>
             </li>
 
             <li class="card">
               <a
-                class="card-link"
+                class="card__link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div class="card-thumb">
+                <div class="card__thumb">
                   <img
                     src="images/growing-business.jpg"
                     alt="фото Growing Business"
                     width="370"
                   />
-                  <div class="card-overlay">
-                    <p class="describe">
+                  <div class="card__overlay">
+                    <p class="card__describe">
                       Growing Business это современная площадка распространения
                       коронавируса. Компании используют эту платформу для
                       цифрового шпионажа и атак на защищённые сервера
@@ -368,9 +380,9 @@
                   </div>
                 </div>
 
-                <div class="card-container">
-                  <h2 class="title">Growing Business</h2>
-                  <p class="type">Приложение</p>
+                <div class="card__info-container">
+                  <h2 class="card__title">Growing Business</h2>
+                  <p class="card__type">Приложение</p>
                 </div>
               </a>
             </li>
@@ -401,7 +413,7 @@
             </ul>
           </address>
         </div>
-        <div class="join-offer-container">
+        <div class="join-offer">
           <p class="join-offer__title">
             <b>Присоединяйтесь</b>
           </p>

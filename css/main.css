@@ -16,11 +16,10 @@
   --secondary-font-name: 'Raleway';
   --secondary-font-family: sans-serif;
   /* Параметры для использования трансфомации */
-  --delay: 3000ms;
+  --delay: 250ms;
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Задания базовых свойств елементам страниц */
 body {
   font-family: var(--main-font-name), var(--main-font-family);
   font-style: normal;
@@ -29,7 +28,22 @@ body {
   background-color: var(--main-bg-color);
 }
 
-/* Задание базовых значений блочной модели основному контейнеру секций */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+*:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+  outline-color: var(--accent-color);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
@@ -38,29 +52,21 @@ body {
   padding-right: 15px;
 }
 
-.section-hero__container {
-  max-width: 1600px;
+.logo {
+  font-family: var(--secondary-font-name), var(--secondary-font-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
-/* Задаем тип и параметры линии обводки при фокусе для всех активных елементов по умолчанию */
-*:focus {
-  outline-width: 1px;
-  outline-style: dotted;
-  outline-color: var(--accent-color);
+.logo__studio--black {
+  color: #000;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-button {
-  cursor: pointer;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.logo__studio--white {
+  color: #fff;
 }
 
 .social-networks {
@@ -95,63 +101,10 @@ button {
   border-radius: 50%;
 }
 
-.logo {
-  font-family: var(--secondary-font-name), var(--secondary-font-family);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--accent-color);
-  text-decoration: none;
+.page-header {
+  border-bottom: 1px solid #ececec;
 }
 
-.logo__studio--black {
-  color: #000;
-}
-
-.logo__studio--white {
-  color: #fff;
-}
-
-/* оформление flex-ом и позиционирование навигации в header */
-.navigation__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 0 93px;
-  padding: 0;
-  list-style: none;
-}
-
-/* оформление flex-ом и позиционирование контактов в header */
-.communication-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-/* установка меджуелементных интервалов навигации и контактов в header */
-.navigation__item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.communication__item:not(:first-child) {
-  margin-left: 30px;
-}
-
-/* Оформление лого и навигации в header flex-ом в один ряд */
-.navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/* Оформление всех елементов header в одну строку через Flex */
 .page-header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,13 +116,33 @@ button {
           align-items: center;
 }
 
-/* Оформление вертикальных отступов логотипа в header */
 .page-header__logo {
   margin-top: 24px;
   margin-bottom: 25px;
 }
 
-/* Оформление текста из навигации в header*/
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 0 93px;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item:not(:first-child) {
+  margin-left: 50px;
+}
+
 .navigation__link {
   display: block;
   font-weight: 500;
@@ -205,7 +178,19 @@ button {
   border-radius: 2px;
 }
 
-/* Оформление ссылок контактной информации (почта, телефон) в header */
+.communication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.communication__item:not(:first-child) {
+  margin-left: 30px;
+}
+
 .communication__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,10 +212,6 @@ button {
   color: var(--accent-color);
 }
 
-.page-header {
-  border-bottom: 1px solid #ececec;
-}
-
 .communication__icon {
   margin-right: 10px;
   fill: currentColor;
@@ -249,7 +230,6 @@ button {
 
 .address-container {
   margin-right: 83px;
-  /**/
 }
 
 .address {
@@ -278,7 +258,7 @@ button {
   color: var(--accent-color);
 }
 
-.join-offer-container {
+.join-offer {
   width: 206px;
   max-height: 80px;
   margin-right: 93px;
@@ -405,6 +385,7 @@ button {
   background-color: var(--current-bg-color);
   border: none;
   border-radius: 4px;
+  cursor: pointer;
   -webkit-transition: -webkit-box-shadow var(--delay) var(--time-function);
   transition: -webkit-box-shadow var(--delay) var(--time-function);
   transition: box-shadow var(--delay) var(--time-function);
@@ -421,7 +402,6 @@ button {
   fill: currentcolor;
 }
 
-/* Задание фона блоку hero */
 .section-hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -433,7 +413,6 @@ button {
   background-repeat: no-repeat;
 }
 
-/* Оформление заголовка в секции hero */
 .section-hero__title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -446,7 +425,6 @@ button {
   text-transform: uppercase;
 }
 
-/* Оформление кнопки "Заказать услугу" в секции hero */
 .section-hero__button {
   display: block;
   margin-left: auto;
@@ -465,13 +443,14 @@ button {
           box-sizing: border-box;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .section-advantages {
   padding-bottom: 0;
 }
 
-.advantage-list {
+.advantage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,12 +547,6 @@ button {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.team-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .section-team {
   background-color: var(--third-bg-color);
 }
@@ -581,9 +554,6 @@ button {
 .section-team__title {
   margin-top: 0;
   margin-bottom: 50px;
-}
-
-.section-team__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -591,7 +561,6 @@ button {
 }
 
 .personal-cards {
-  /* Расстояние между карточками работников (наша команда) в Студия */
   --person-set-gap: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,7 +634,7 @@ button {
   text-align: center;
 }
 
-.clients__list {
+.clients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,6 +676,151 @@ button {
 
 .clients__icon {
   fill: currentColor;
+}
+
+.section-portfolio__button-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.section-portfolio__button-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.section-portfolio__button {
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  color: var(--main-txt-color);
+  text-align: center;
+  background-color: var(--third-bg-color);
+  border-style: none;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: background-color var(--delay) var(--time-function), color var(--delay) var(--time-function), -webkit-box-shadow var(--delay) var(--time-function);
+  transition: background-color var(--delay) var(--time-function), color var(--delay) var(--time-function), -webkit-box-shadow var(--delay) var(--time-function);
+  transition: background-color var(--delay) var(--time-function), color var(--delay) var(--time-function), box-shadow var(--delay) var(--time-function);
+  transition: background-color var(--delay) var(--time-function), color var(--delay) var(--time-function), box-shadow var(--delay) var(--time-function), -webkit-box-shadow var(--delay) var(--time-function);
+}
+
+.section-portfolio__button:hover, .section-portfolio__button:focus {
+  color: var(--current-txt-color);
+  background-color: var(--current-bg-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.section-portfolio__work-list {
+  --card-set-gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: calc(-1 * var(--card-set-gap));
+  padding-left: 0;
+  list-style: none;
+}
+
+.card {
+  -ms-flex-preferred-size: calc(100% / 3 - var(--card-set-gap));
+      flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  background-color: #fff;
+}
+
+.card__link {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: -webkit-box-shadow var(--delay) var(--time-function);
+  transition: -webkit-box-shadow var(--delay) var(--time-function);
+  transition: box-shadow var(--delay) var(--time-function);
+  transition: box-shadow var(--delay) var(--time-function), -webkit-box-shadow var(--delay) var(--time-function);
+}
+
+.card__link:hover, .card__link:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform var(--delay) var(--time-function);
+  transition: -webkit-transform var(--delay) var(--time-function);
+  transition: transform var(--delay) var(--time-function);
+  transition: transform var(--delay) var(--time-function), -webkit-transform var(--delay) var(--time-function);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  /* background-color: rgba(33, 150, 243, 0.9); */
+  background-color: var(--current-bg-color);
+  opacity: 0.9;
+}
+
+.card__link:hover .card__overlay,
+.card__link:focus .card__overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card__describe {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.556;
+  letter-spacing: 0.03em;
+  color: var(--current-txt-color);
+}
+
+.card__info-container {
+  padding: 20px 24px;
+  border: 1px solid #eee;
+  border-top: none;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-txt-color);
+}
+
+.card__type {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--secondary-txt-color);
 }
 
 .backdrop {
@@ -751,7 +865,6 @@ button {
           transform: translate(-50%, -50%) scale(0.8);
 }
 
-/* Оформление кнопки Закрыть на модальном окне */
 .close-button {
   position: absolute;
   top: 0;
@@ -1007,4 +1120,6 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/*ПРОВЕРКА КАЧЕСТВА РАЗМЕТКИ*/
 /*# sourceMappingURL=main.css.map */

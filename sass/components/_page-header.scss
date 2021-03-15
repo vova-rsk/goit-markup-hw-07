@@ -1,35 +1,7 @@
-/* оформление flex-ом и позиционирование навигации в header */
-.navigation__menu {
-  display: flex;
-  margin: 0 0 0 93px;
-  padding: 0;
-  list-style: none;
+.page-header {
+  border-bottom: 1px solid #ececec;
 }
 
-/* оформление flex-ом и позиционирование контактов в header */
-.communication-list {
-  display: flex;
-  margin: 0 0 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-/* установка меджуелементных интервалов навигации и контактов в header */
-.navigation__item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.communication__item:not(:first-child) {
-  margin-left: 30px;
-}
-
-/* Оформление лого и навигации в header flex-ом в один ряд */
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-/* Оформление всех елементов header в одну строку через Flex */
 .page-header__container {
   display: flex;
   padding-top: 0;
@@ -37,13 +9,27 @@
   align-items: center;
 }
 
-/* Оформление вертикальных отступов логотипа в header */
 .page-header__logo {
   margin-top: 24px;
   margin-bottom: 25px;
 }
 
-/* Оформление текста из навигации в header*/
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__menu {
+  display: flex;
+  margin: 0 0 0 93px;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item:not(:first-child) {
+  margin-left: 50px;
+}
+
 .navigation__link {
   display: block;
   font-weight: 500;
@@ -78,7 +64,17 @@
   }
 }
 
-/* Оформление ссылок контактной информации (почта, телефон) в header */
+.communication {
+  display: flex;
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.communication__item:not(:first-child) {
+  margin-left: 30px;
+}
+
 .communication__link {
   display: flex;
   align-items: center;
@@ -94,10 +90,6 @@
   &:focus {
     color: var(--accent-color);
   }
-}
-
-.page-header {
-  border-bottom: 1px solid #ececec;
 }
 
 .communication__icon {
