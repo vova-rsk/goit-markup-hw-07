@@ -29,7 +29,6 @@ body {
   background-color: var(--main-bg-color);
 }
 
-/* Задаем секциям, футеру и хедеру максимальной ширины */
 /* Задание базовых значений блочной модели основному контейнеру секций */
 .container {
   width: 1200px;
@@ -71,6 +70,7 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -236,7 +236,6 @@ button {
   fill: currentColor;
 }
 
-/* Задание фона блоку footer */
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -249,14 +248,15 @@ button {
 }
 
 .address-container {
-  margin-right: 70px;
+  margin-right: 83px;
+  /**/
 }
 
 .address {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714;
   color: #fff;
 }
 
@@ -285,6 +285,7 @@ button {
 }
 
 .join-offer__title {
+  margin-top: 0;
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 14px;
@@ -327,6 +328,7 @@ button {
 }
 
 .sign-container__title {
+  margin-top: 0;
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 14px;
@@ -336,11 +338,17 @@ button {
   color: var(--current-txt-color);
 }
 
+.sign-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .sign-form__email {
   padding-left: 16px;
   padding-right: 16px;
   width: 358px;
-  height: 46px;
+  height: 50px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -388,7 +396,7 @@ button {
   margin-left: 12px;
   padding: 0;
   width: 200px;
-  height: 46px;
+  height: 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875px;
@@ -427,6 +435,7 @@ button {
 
 /* Оформление заголовка в секции hero */
 .section-hero__title {
+  margin-top: 0;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -498,6 +507,7 @@ button {
 }
 
 .advantage__title {
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -545,8 +555,8 @@ button {
   bottom: 0;
   display: inline-block;
   margin: 0;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 27px;
+  padding-bottom: 27px;
   width: 100%;
   font-weight: 700;
   font-size: 14px;
@@ -589,7 +599,10 @@ button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: calc(-1 * var(--person-set-gap));
+  margin-right: 0;
+  margin-bottom: 0;
   margin-left: calc(-1 * var(--person-set-gap));
+  padding: 0;
   list-style: none;
 }
 
@@ -609,6 +622,7 @@ button {
 }
 
 .personal-cards__name {
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -617,6 +631,7 @@ button {
 }
 
 .personal-cards__position {
+  margin-top: 0;
   margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;

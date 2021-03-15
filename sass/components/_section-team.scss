@@ -28,7 +28,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--person-set-gap));
+  margin-right: 0;
+  margin-bottom: 0;
   margin-left: calc(-1 * var(--person-set-gap));
+  padding: 0;
   list-style: none;
 }
 
@@ -47,6 +50,7 @@
 }
 
 .personal-cards__name {
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -55,6 +59,7 @@
 }
 
 .personal-cards__position {
+  margin-top: 0;
   margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;

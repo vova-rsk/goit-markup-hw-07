@@ -7,14 +7,6 @@ body {
   background-color: var(--main-bg-color);
 }
 
-/* Задаем секциям, футеру и хедеру максимальной ширины */
-// .page-header,
-// .page-footer 
-
-// .section {
-//   max-width: 1600px;
-// }
-
 /* Задание базовых значений блочной модели основному контейнеру секций */
 .container {
   width: 1200px;
@@ -52,6 +44,7 @@ button {
 .social-networks {
   display: flex;
   justify-content: space-between;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
